@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import About from "../components/About";
 import ExperiencePreview from "../components/ExperiencePreview";
-import ProjectPreview from "../components/ProjectPreivew";
+import ProjectPreview from "../components/ProjectPreview";
 
 const Home = () => {
   return (
