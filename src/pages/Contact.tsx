@@ -2,9 +2,7 @@ const Contact = () => {
   return (
     <main className="mx-auto max-w-2xl px-5 py-20 sm:px-8">
       <section>
-        <h1 className="text-5xl font-bold text-[var(--foreground)]">
-          Contact
-        </h1>
+        <h1 className="text-5xl font-bold text-[var(--foreground)]">Contact</h1>
 
         <p className="mt-3 text-[var(--muted-foreground)]">
           Have a question or want to get in touch?
@@ -56,12 +54,14 @@ const Contact = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            className="text-[var(--foreground)] hover:underline"
-          >
-            Send →
-          </button>
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="text-[var(--foreground)] hover:underline"
+            >
+              Send →
+            </button>
+          </div>
         </form>
       </section>
     </main>
