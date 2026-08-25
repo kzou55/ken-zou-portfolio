@@ -6,38 +6,28 @@ type ProjectPreviewCardProps = {
 
 const ProjectPreviewCard = ({ project }: ProjectPreviewCardProps) => {
   return (
-      <article className="border-b border-[var(--border)] py-6">
-        <div className="flex items-start justify-between gap-6">
-          <div>
-            <h3 className="text-xl font-semibold text-[var(--foreground)]">
-              {project.name}
-            </h3>
-
-            <p className="mt-1 text-[var(--muted-foreground)]">
-              {project.description}
-            </p>
-          </div>
-
-          <p className="shrink-0 text-[var(--muted-foreground)]">
-            {project.startDate} – {project.endDate}
-          </p>
-        </div>
-
-        <p className="mt-4 text-[var(--muted-foreground)]">
-          {project.description}
-        </p>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.techStack.map((technology) => (
-            <span
-              key={technology}
-              className="text-sm text-[var(--muted-foreground)]"
-            >
-              {technology}
-            </span>
-          ))}
-        </div>
-      </article>
+    <article className="flex h-full flex-col border rounded-xl border-[var(--border)] p-4">
+      <div className="font-bold text-[var(--foreground)]">{project.name}</div>
+      <div className="text-xs text-[var(--muted-foreground)] mb-4">
+        {project.startDate} - {project.endDate}
+      </div>
+      <p className="text-sm text-[var(--muted-foreground)] mb-5">
+        {project.description}
+      </p>
+      <div className="flex flex-wrap gap-2 mt-auto mb-5">
+        {project.techStack.map((tech) => (
+          <span
+            key={tech}
+            className="border rounded-sm text-xs px-2 py-1 text-[var(--muted-foreground)] "
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+      <a href={""} className="self-start border rounded-sm px-2 py-1 text-sm">
+        View Project
+      </a>
+    </article>
   );
 };
 

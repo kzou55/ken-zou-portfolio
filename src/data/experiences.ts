@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
       technology.mongodb,
     ],
     companyLink: "https://onecommunityglobal.org/",
-    jobTitle: "Full-Stack Software Engineer - MERN Stack",
+    jobTitle: "Software Engineer - MERN Stack",
   },
   {
     company: "Generate Product Development - Jurni",
@@ -29,7 +29,7 @@ export const experiences: Experience[] = [
     jobTitle: "Build Studio Software Engineer",
   },
   {
-    company: "HealthEdge(Formerly Wellframe)",
+    company: "HealthEdge (Formerly Wellframe)",
     logo: "",
     dateStart: "January 2022",
     dateEnd: "December 2022",
