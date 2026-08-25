@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
-import ProjectPreviewCard from "./ProjectPreviewCard";
+import PreviewCard from "./PreviewCard";
 
 const ProjectPreview = () => {
   return (
@@ -13,7 +13,16 @@ const ProjectPreview = () => {
       </div>
       <div className="grid grid-cols-3 gap-6">
         {projects.slice(0, 3).map((project) => (
-          <ProjectPreviewCard key={`${project.name}`} project={project} />
+          <PreviewCard
+            key={project.name}
+            title={project.name}
+            startDate={project.startDate}
+            endDate={project.endDate}
+            description={project.description}
+            techStack={project.techStack}
+            linkText="View Project"
+            linkTo="/projects"
+          />
         ))}
       </div>
     </section>

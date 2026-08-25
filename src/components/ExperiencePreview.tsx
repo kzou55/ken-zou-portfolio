@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { experiences } from "../data/experiences";
-import ExperiencePreviewCard from "./ExperiencePreviewCard";
+import PreviewCard from "./PreviewCard";
 
 const ExperiencePreview = () => {
   return (
@@ -13,9 +13,16 @@ const ExperiencePreview = () => {
       </div>
       <div className="grid grid-cols-3 gap-6">
         {experiences.slice(0, 3).map((experience) => (
-          <ExperiencePreviewCard
-            key={`${experience.company}-${experience.jobTitle}`}
-            experience={experience}
+          <PreviewCard
+            key={experience.company}
+            title={experience.company}
+            subtitle={experience.jobTitle}
+            startDate={experience.dateStart}
+            endDate={experience.dateEnd}
+            description={experience.description}
+            techStack={experience.techStack}
+            linkText="View Role"
+            linkTo="/experience"
           />
         ))}
       </div>
