@@ -9,16 +9,13 @@ const Footer = () => {
         {location.pathname !== "/contact" && (
           <div className="text-center">
             <p className="text-sm font-semibold text-[var(--foreground)]">
-              Have a project in mind?{" "}
+              {" "}
               <Link
                 to="/contact"
                 className="font-normal text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
               >
                 Let's get in touch →
               </Link>
-              <span className="font-normal text-[var(--muted-foreground)]">
-                Let's get in touch →
-              </span>
             </p>
           </div>
         )}

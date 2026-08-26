@@ -1,3 +1,5 @@
+import SkillBadge from "./common/SkillBadge";
+
 type PreviewCardProps = {
   title: string;
   subtitle?: string;
@@ -33,14 +35,9 @@ const PreviewCard = ({
       <p className="text-sm text-[var(--muted-foreground)] mb-5">
         {description}
       </p>
-      <div className="flex flex-wrap gap-2 mt-auto mb-5">
+      <div className="flex flex-wrap gap-1 items-end mt-auto mb-5">
         {techStack.map((tech) => (
-          <span
-            key={tech}
-            className="border rounded-sm text-xs px-2 py-1 text-[var(--muted-foreground)] "
-          >
-            {tech}
-          </span>
+          <SkillBadge key={tech} skill={tech} />
         ))}
       </div>
       <a
