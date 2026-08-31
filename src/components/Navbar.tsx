@@ -33,13 +33,15 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center gap-6">
+          
+        {/** 
           <Link
             to="/about"
             className="text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
           >
             About
           </Link>
-
+          */}  
           <Link
             to="/experience"
             className="text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
