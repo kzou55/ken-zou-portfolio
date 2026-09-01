@@ -36,10 +36,12 @@ type Project = {
 
 type Experience = {
     company: string;
+    id: string;
     logo: string;
     dateStart: string;
     dateEnd: string;
     description: string;
+    accomplishments: string[];
     techStack: Technology[];
     companyLink: string;
     jobTitle: string;

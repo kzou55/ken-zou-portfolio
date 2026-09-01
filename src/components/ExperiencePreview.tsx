@@ -22,7 +22,8 @@ const ExperiencePreview = () => {
             description={experience.description}
             techStack={experience.techStack}
             linkText="View Role"
-            linkTo="/experience"
+            linkTo={`/experience#${experience.id}`}
+            image={experience.logo}
           />
         ))}
       </div>

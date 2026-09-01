@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SkillBadge from "./common/SkillBadge";
 
 type PreviewCardProps = {
@@ -9,6 +10,7 @@ type PreviewCardProps = {
   techStack: string[];
   linkText: string;
   linkTo: string;
+  image?: string;
 };
 
 const PreviewCard = ({
@@ -20,10 +22,21 @@ const PreviewCard = ({
   techStack,
   linkText,
   linkTo,
+  image,
 }: PreviewCardProps) => {
   return (
     <article className="flex h-full flex-col border rounded-xl border-[var(--border)] p-4">
-      <div className="font-bold text-[var(--foreground)]">{title}</div>
+      <div className="flex items-center gap-3 mb-2">
+        {image && (
+          <img
+            src={image}
+            alt={`${title} logo`}
+            className="hidden h-10 w-10 object-contain md:block"
+          /> 
+        )}
+
+        <div className="font-bold text-[var(--foreground)] text-xs md:text-sm">{title}</div>
+      </div>
       {subtitle && (
         <div className="text-xs text-[var(--muted-foreground)] ">
           {subtitle}
@@ -37,15 +50,19 @@ const PreviewCard = ({
       </p>
       <div className="flex flex-wrap gap-1 items-end mt-auto mb-5">
         {techStack.map((tech) => (
-          <SkillBadge key={tech} skill={tech} />
+          <SkillBadge
+            key={tech}
+            skill={tech}
+            className="px-2 py-[2px] text-xs"
+          />
         ))}
       </div>
-      <a
-        href={linkTo}
+      <Link
+        to={linkTo}
         className="self-start border rounded-sm px-2 py-1 text-sm"
       >
         {linkText}
-      </a>
+      </Link>
     </article>
   );
 };
