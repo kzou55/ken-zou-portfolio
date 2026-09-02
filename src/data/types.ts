@@ -25,9 +25,11 @@ type Technology = (typeof technology)[keyof typeof technology];
 
 type Project = {
     name: string;
+    id: string;
     startDate: string;
     endDate: string;
     description: string;
+    accomplishments: string[];
     logo: string
     techStack: Technology[];
     link?: string,

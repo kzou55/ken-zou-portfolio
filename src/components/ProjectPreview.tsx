@@ -21,7 +21,7 @@ const ProjectPreview = () => {
             description={project.description}
             techStack={project.techStack}
             linkText="View Project"
-            linkTo="/projects"
+            linkTo={`/projects#${project.id}`}
           />
         ))}
       </div>
